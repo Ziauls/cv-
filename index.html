@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<html lang="id"><head><meta charset="utf-8"><script>document.documentElement.dataset.theme="dark"</script><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Zia Ulhaq Saputra – CV</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
@@ -57,7 +57,7 @@ html{background:var(--bg)}body{background:transparent}
 @keyframes pu{50%{transform:scale(1.1) rotate(6deg);box-shadow:0 0 0 18px rgba(255,255,255,.14)}}
 .spt{font:600 .95rem/1.4 ui-monospace,Menlo,Consolas,monospace;min-height:1.4em;margin:0}.pb{width:100%;height:8px;border-radius:9px;background:rgba(255,255,255,.3);overflow:hidden}.pb span{display:block;height:100%;width:0;background:#fff;border-radius:9px;transition:width .2s}
 @keyframes up{from{opacity:0;transform:translateY(24px)}}
-.js .ht>*,.js .ph{animation:up .8s both;animation-delay:calc(2.4s + var(--i,0)*.12s)}
+.js .ht>*,.js .ph{animation:up .8s both;animation-delay:calc(.05s + var(--i,0)*.1s)}
 .hero{max-width:none;padding-inline:max(22px,calc(50% - 518px));background:linear-gradient(135deg,#dbeafe,#cffafe 45%,#ede9fe);background-size:200% 200%;animation:gs 12s ease infinite}
 :root[data-theme="dark"] .hero{background:linear-gradient(135deg,#0a1226,#13204a 55%,#2a1458) 0 0/200% 200%}
 #net{position:absolute;inset:0;width:100%;height:100%;z-index:0}.bl{opacity:.4}.b3{width:240px;height:240px;background:#f472b6;top:40%;left:42%;animation-delay:-7s}
@@ -139,10 +139,12 @@ h1{background:none;-webkit-background-clip:border-box;background-clip:border-box
 .btn:active,.soc a:active,.cc:active,.cd:active,#th:active{transform:scale(.96)!important}
 .rp{position:absolute;pointer-events:none;width:20px;height:20px;margin:-10px 0 0 -10px;border-radius:50%;background:radial-gradient(circle,#fff,var(--ac) 40%,var(--ac2) 80%);transform:scale(0);opacity:.95;z-index:-1;animation:rpl .75s ease-out forwards}
 .cd .rp,.lbb .rp{z-index:2}@keyframes rpl{60%{opacity:.85}to{transform:scale(var(--s,30));opacity:0}}
+.nl a::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,var(--ac),var(--ac2));transform:translateX(-101%);transition:transform .4s;z-index:-1}
+.nl a:hover::before{transform:none}.nl a:hover{color:#fff}.nl a:active{transform:scale(.94)}.nl a::after{display:none}
 footer{text-align:center;color:var(--mut);font-size:.85rem;padding-top:14px}
 @media(max-width:760px){.hs .hr{grid-template-columns:1fr}.hero{grid-template-columns:1fr;padding-top:40px}.ph{order:-1}.ring{width:220px}.g{grid-template-columns:1fr}.nl{display:none}}
 @media(prefers-reduced-motion:reduce){*,*::before{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}.bar span{width:var(--w)}}
-</style></head><body><div id="sp"><canvas id="spc"></canvas><div class="spi"><div class="hud"><i></i><i></i><i></i><b>Z</b></div><p class="spt" id="spt"></p><div class="pb"><span id="pbar"></span></div><small id="pct">0%</small></div></div><div id="prog"></div><div id="lb" hidden><button class="lbb" id="lx" aria-label="Tutup">×</button><button class="lbb" id="lp" aria-label="Sebelumnya">‹</button><img id="li" alt=""><button class="lbb" id="ln" aria-label="Berikutnya">›</button><p id="lc"></p></div><nav id="nav"><a class="logo" href="#home">Zia Ulhaq Saputra</a><div class="nl"><a href="#home">Home</a><a href="#about">Tentang</a><a href="#skills">Skill</a><a href="#services">Services</a><a href="#sertifikat">Sertifikat</a><a href="#contact">Contact</a></div><button id="th" type="button" aria-label="Ganti tema terang atau gelap"><span>☀</span><span>☾</span><i></i></button></nav>
+</style></head><body><div id="prog"></div><div id="lb" hidden><button class="lbb" id="lx" aria-label="Tutup">×</button><button class="lbb" id="lp" aria-label="Sebelumnya">‹</button><img id="li" alt=""><button class="lbb" id="ln" aria-label="Berikutnya">›</button><p id="lc"></p></div><nav id="nav"><a class="logo" href="#home">Zia Ulhaq Saputra</a><div class="nl"><a href="#home">Home</a><a href="#about">Tentang</a><a href="#skills">Skill</a><a href="#services">Services</a><a href="#sertifikat">Sertifikat</a><a href="#contact">Contact</a></div><button id="th" type="button" aria-label="Ganti tema terang atau gelap"><span>☀</span><span>☾</span><i></i></button></nav>
 <header class="hero" id="home"><i class="bl b1"></i><i class="bl b2"></i><i class="bl b3"></i><div class="gf"></div><canvas id="net"></canvas>
 <div class="ht"><p class="stt"><i></i>SYSTEM ONLINE · NETWORK ENGINEER</p><p class="hi">Hi, I’m</p><h1 data-t="Zia Ulhaq Saputra">Zia Ulhaq Saputra</h1><p class="ty">I’m a <span id="ty"></span><u></u></p>
 <p class="sub">Mahasiswa Politeknik Negeri Lhokseumawe, Jurusan Teknologi Informasi dan Komputer, Prodi Teknologi Rekayasa Komputer Jaringan.</p>
@@ -165,14 +167,9 @@ if(!del&&ci===w.length){del=true;d=1400}else if(del&&ci===0){del=false;ri=(ri+1)
 const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.12});
 document.querySelectorAll(".rv").forEach(s=>io.observe(s));
 document.getElementById("th").onclick=()=>{const r=document.documentElement;const d=r.dataset.theme==="dark";if(d)delete r.dataset.theme;else r.dataset.theme="dark";try{localStorage.setItem("th",d?"light":"dark")}catch(e){}};
-let ts=null;try{ts=localStorage.getItem("th")}catch(e){}if(ts?ts==="dark":true)document.documentElement.dataset.theme="dark";
+document.documentElement.dataset.theme="dark";
 </script><script>
-(()=>{const sp=document.getElementById("sp"),c=document.getElementById("spc"),x=c.getContext("2d");let W,H,P=[],on=true;
-const rs=()=>{W=c.width=innerWidth;H=c.height=innerHeight;P=Array.from({length:Math.min(70,W/14|0)},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.9,vy:(Math.random()-.5)*.9}))};rs();addEventListener("resize",rs);
-(function f(){if(!on)return;x.clearRect(0,0,W,H);P.forEach((p,i)=>{p.x=(p.x+p.vx+W)%W;p.y=(p.y+p.vy+H)%H;x.fillStyle="rgba(255,255,255,.85)";x.beginPath();x.arc(p.x,p.y,2.2,0,7);x.fill();for(let j=i+1;j<P.length;j++){const q=P[j],d=Math.hypot(p.x-q.x,p.y-q.y);if(d<120){x.strokeStyle="rgba(255,255,255,"+(1-d/120)*.5+")";x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.stroke()}}});requestAnimationFrame(f)})();
-const L=["> boot sequence initiated","> mounting profile.zia ....... [OK]","> loading skills + certs ..... [OK]","> network link established ... [OK]","> ACCESS GRANTED"],t=document.getElementById("spt"),b=document.getElementById("pbar"),pc=document.getElementById("pct");let n=0,li=0,ci=0;
-(function ty(){if(li<L.length){t.innerHTML=L.slice(0,li).join("<br>")+(li?"<br>":"")+L[li].slice(0,++ci);if(ci>=L[li].length){li++;ci=0;return setTimeout(ty,110)}setTimeout(ty,14)}})();
-const iv=setInterval(()=>{n=Math.min(100,n+3+Math.random()*5);b.style.width=n+"%";pc.textContent=(n|0)+"%";if(n>=100){clearInterval(iv);setTimeout(()=>{sp.classList.add("out");setTimeout(()=>{on=false;sp.remove()},800)},250)}},150);})();
+
 (()=>{const h=document.getElementById("home"),c=document.getElementById("net"),x=c.getContext("2d");let W,H,P=[],m={x:-999,y:-999};
 const rs=()=>{W=c.width=h.clientWidth;H=c.height=h.clientHeight;P=Array.from({length:Math.min(60,W/16|0)},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.5,vy:(Math.random()-.5)*.5}))};rs();addEventListener("resize",rs);
 h.addEventListener("pointermove",e=>{const r=h.getBoundingClientRect();m.x=e.clientX-r.left;m.y=e.clientY-r.top});h.addEventListener("pointerleave",()=>m.x=-999);
